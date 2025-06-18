@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+body {
+  background: linear-gradient(to bottom, #ff69b4, #87ceeb);
+  color: #333;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+header h1:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff1493;
+}
+
+.saiba-mais {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #ff69b4, #87ceeb);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.saiba-mais:hover {
+  transform: scale(1.05);
+}
+
+.sobre {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.servicos {
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.servicos h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+.contato {
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contato h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato input,
+.contato textarea {
+  padding: 10px;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contato input:focus,
+.contato textarea:focus {
+  outline: none;
+  border-color: #87ceeb;
+}
+
+.contato textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contato button {
+  padding: 10px;
+  background: linear-gradient(to right, #ff69b4, #87ceeb);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contato button:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-top: 4px solid #ff69b4;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .saiba-mais {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .sobre, .contato {
+    margin: 20px;
+    padding: 15px;
+  }
+}
